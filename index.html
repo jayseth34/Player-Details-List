@@ -581,7 +581,7 @@
         // Add header
         doc.setFontSize(20);
         doc.setFont('helvetica', 'bold');
-        doc.text('Satyapur Premier League', pageWidth / 2, yPosition, { align: 'center' });
+        doc.text('Metal Market Bhinmal', pageWidth / 2, yPosition, { align: 'center' });
 
         yPosition += 10;
         doc.setFontSize(14);
@@ -684,7 +684,7 @@
           textY += 6;
           const availableDates = player.availableOnDates && player.availableOnDates.trim() ?
             player.availableOnDates : 'N/A';
-          doc.text(`Available On: ${availableDates}`, textX, textY);
+          doc.text(`Company: ${availableDates}`, textX, textY);
 
           // Much more spacing needed for 50x50mm images
           yPosition += 60; // 50mm image + 10mm gap
@@ -693,7 +693,7 @@
           yPosition += 5;
         }
 
-        const fileName = `Satyapur_Players_${new Date().toISOString().split('T')[0]}.pdf`;
+        const fileName = `Players_${new Date().toISOString().split('T')[0]}.pdf`;
         doc.save(fileName);
 
         downloadBtn.disabled = false;
@@ -715,3 +715,4 @@
 </body>
 
 </html>
+
