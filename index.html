@@ -428,7 +428,7 @@
   <script>
 function getTournamentIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
-  return params.get('tournamentsId');
+  return params.get('tournamentId');
 }
     const tournamentId = getTournamentIdFromUrl() || 7; 
     const apiUrl = `https://be.sportyfy.in/api/Player/GetAllPlayersByTourId/${tournamentId}`;
@@ -712,6 +712,7 @@ function getTournamentIdFromUrl() {
 </body>
 
 </html>
+
 
 
 
