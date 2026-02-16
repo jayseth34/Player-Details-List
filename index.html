@@ -426,7 +426,12 @@
   </div>
 
   <script>
-    const apiUrl = 'https://be.sportyfy.in/api/Player/GetAllPlayersByTourId/7';
+function getTournamentIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('tournamentsId');
+}
+    const tournamentId = getTournamentIdFromUrl() || 7; 
+    const apiUrl = `https://be.sportyfy.in/api/Player/GetAllPlayersByTourId/${tournamentId}`;
     const defaultProfileImg = 'https://ui-avatars.com/api/?name=Player&size=200&background=e0e3e8&color=333';
     let playersData = [];
 
@@ -707,6 +712,7 @@
 </body>
 
 </html>
+
 
 
 
