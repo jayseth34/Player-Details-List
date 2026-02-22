@@ -578,7 +578,7 @@ function getTournamentIdFromUrl() {
         // Add header
         doc.setFontSize(20);
         doc.setFont('helvetica', 'bold');
-        doc.text('Metal Market Bhinmal', pageWidth / 2, yPosition, { align: 'center' });
+        doc.text('All Players List', pageWidth / 2, yPosition, { align: 'center' });
 
         yPosition += 10;
         doc.setFontSize(14);
@@ -681,7 +681,7 @@ function getTournamentIdFromUrl() {
           textY += 6;
           const availableDates = player.availableOnDates && player.availableOnDates.trim() ?
             player.availableOnDates : 'N/A';
-          doc.text(`Company: ${availableDates}`, textX, textY);
+          doc.text(`Other: ${availableDates}`, textX, textY);
 
           // Much more spacing needed for 50x50mm images
           yPosition += 60; // 50mm image + 10mm gap
@@ -712,6 +712,7 @@ function getTournamentIdFromUrl() {
 </body>
 
 </html>
+
 
 
 
